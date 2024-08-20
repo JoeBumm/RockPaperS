@@ -54,13 +54,10 @@ else {
 //Runs after a score of 20 whether for the human or the computer
 function playGame() {
     if (humanScore === computerScore) {
-        console.log("Your score: " + humanScore + " | Computer's score: " + computerScore);
         return "That's a Draw!!";
     } else if (humanScore > computerScore) {
-        console.log("Your score: " + humanScore + " | Computer's score: " + computerScore);
         return "You win the game!!";
     } else {
-        console.log("Your score: " + humanScore + " | Computer's score: " + computerScore);
         return "You lose the game!";
     }
 }
