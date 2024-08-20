@@ -14,6 +14,7 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
     // Check for a draw first
+    if (humanScore < 3 && computerScore < 3) {
     if (humanChoice === computerChoice) {
         afterGameMessage.innerText = "That's a draw!!";
         return; // No score change
@@ -35,6 +36,20 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
     }
 }
+else {
+    const container = document.querySelector('.container');
+    const header = document.querySelector('h1');// h1 because its used once in the html
+    const gameMsg = playGame();
+    const centerElementsForBeauty = document.querySelector('.gameStatus h3');
+    console.log(centerElementsForBeauty);
+    afterGameMessage.innerText = gameMsg;
+    container.style.display = 'none';
+    header.style.display= 'none';
+    centerElementsForBeauty.style.fontSize = '70px';
+    centerElementsForBeauty.style.marginTop = '90px';
+}
+
+}
 
 //Runs after a score of 20 whether for the human or the computer
 function playGame() {
@@ -55,10 +70,10 @@ function playGame() {
 const btn = document.querySelectorAll('.play-btn');
 const gameChoices = ["ROCK","PAPER","SCISSORS"];
 
-// Variable for manipulating and saving the scores
+// Variable for manipulating and saving the scores, span is used to manipulate only numbers
 const score = document.querySelectorAll("span");
 
-
+// basic event on click callback function and updating scores
 btn[0].addEventListener("click",  ()=>{
     playRound(gameChoices[0],getComputerChoice())
     score[0].innerText = humanScore;
@@ -76,7 +91,4 @@ btn[2].addEventListener("click",  ()=>{
     score[0].innerText = humanScore;
     score[1].innerText = computerScore;
 });
-
-
-
 
