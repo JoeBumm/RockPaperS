@@ -56,12 +56,12 @@ function playGame() {
     }
 }
 
-// Main game loop
-for (let i = 0; i < 3; i++) { // Loop for 3 rounds
-    let computerChoice = getComputerChoice();
-    let humanChoice = getHumanChoice();
-    playRound(humanChoice, computerChoice);
-}
+// // Main game loop
+// for (let i = 0; i < 3; i++) { // Loop for 3 rounds
+//     let computerChoice = getComputerChoice();
+//     let humanChoice = getHumanChoice();
+//     playRound(humanChoice, computerChoice);
+// }
 
 // Final game result
 console.log(playGame());
