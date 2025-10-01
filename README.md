@@ -1,4 +1,3 @@
-# RockPaperS
 
 Welcome to another project following the odin project course 
 This is a game of Rock Paper Scissors currently only working on console.
