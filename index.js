@@ -67,9 +67,6 @@ function playGame() {
 const btn = document.querySelectorAll('.play-btn');
 const gameChoices = ["ROCK","PAPER","SCISSORS"];
 
-// Variable for manipulating and saving the scores, span is used to manipulate only numbers
-const score = document.querySelectorAll("span");
-
 // basic event on click callback function and updating scores
 btn[0].addEventListener("click",  ()=>{
     playRound(gameChoices[0],getComputerChoice())
