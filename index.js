@@ -1,6 +1,4 @@
-let humanScore = 0;
-let computerScore = 0;
-// Displays if you lost or won after the game..
+
 const afterGameMessage = document.querySelector('.gameStatus h3');
 
 function getComputerChoice() {
